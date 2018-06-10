@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HTTP Request Override</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <h1>HTTP Request Override</h1>
-            <label for="headerActivate">
-                Active : 
-                <input id="switchActiveExtension" type="checkbox">
-            </label>
+        <div class="header__title">
+            <h1>HTTP Request <b>Override</b></h1>
+        </div>
+        <div class="header__settings">
             <a href="#" class="btn" id="btn__addRules">Add Rule 
                 <img class="icon-16px" src="../assets/img/plus.svg" alt="Add rule">
             </a>
+            <label for="switchActiveExtension">
+                Watch requests
+                <input id="switchActiveExtension" type="checkbox"><label for="switchActiveExtension">Toggle</label>
+            </label>
         </div>
     </header>
 
     <main>
-        <p>Click on AddRule to add a rule.</p>
+        <p>Click on Add Rule to add a rule.</p>
     </main>
     
     <script src="../services/store.js"></script>

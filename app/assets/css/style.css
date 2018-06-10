@@ -1,110 +1,153 @@
 body {
-    font-family: 'Proxima Nova', arial, sans-serif;
-    color: #495057;
-    margin: 0;
-    width:600px;
-    height:800px;
-}
+  font-family: 'Open Sans', sans-serif;
+  color: #35393d;
+  margin: 0;
+  width: 600px;
+  height: 800px;
+  background-color: #f8f8f8; }
 
 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.wrapper {
-    max-width: 1024px;
-    width: 80%;
-    margin: 0 auto;
-    text-align: left;
-}
+  color: inherit;
+  text-decoration: none; }
 
 /* ------ Header ------ */
-
 header {
-    background-color: #495057;
-    color: white;
-    padding: 10px 20px; 
-}
-
-.header--extensionActive {
-    background: linear-gradient(to right, #495057 , green);
-}
-
-header .wrapper {
+  color: white; }
+  header .header__title, header .header__settings {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-header .btn {
-    border: 1px solid white;
-    border-radius: 50px;
-    font-size: 14px;
-    padding: 9px 28px;
-    font-weight: 300;
-}
-
-header .btn#btn__addRules,
-main .rule .rule__actions .rule--delete {
-    display: flex;
-    align-items: center;
-}
+    justify-content: space-around;
+    align-items: center; }
+  header.header--extensionActive .header__title {
+    background: linear-gradient(to right, #2a0967, #01ffc4); }
+  header .header__title {
+    background: linear-gradient(to right, #2a0967, #4e2fe1);
+    padding: 10px 20px;
+    box-shadow: 0px -4px 21px black;
+    position: relative; }
+    header .header__title h1 {
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: uppercase; }
+      header .header__title h1 b {
+        font-weight: 600; }
+  header .header__settings {
+    background-color: white;
+    color: #565656;
+    padding: 20px 0;
+    box-shadow: 3px 3px 14px #d9d9d9; }
+    header .header__settings .btn {
+      outline: none;
+      border: 1px solid #4e2fe1;
+      color: #4e2fe1;
+      border-radius: 50px;
+      font-size: 14px;
+      padding: 9px 28px;
+      font-weight: 300;
+      background: #ffffff;
+      box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.18);
+      transition: all 400ms ease; }
+      header .header__settings .btn:hover {
+        color: #846fed; }
+    header .header__settings label[for='switchActiveExtension'] {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+      line-height: 26px;
+      text-transform: uppercase; }
+      header .header__settings label[for='switchActiveExtension'] input[type=checkbox] {
+        height: 0;
+        width: 0;
+        visibility: hidden; }
+      header .header__settings label[for='switchActiveExtension'] label {
+        cursor: pointer;
+        margin-left: 10px;
+        text-indent: -9999px;
+        width: 50px;
+        height: 25px;
+        background: grey;
+        display: block;
+        border-radius: 50px;
+        position: relative; }
+      header .header__settings label[for='switchActiveExtension'] label:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 21px;
+        height: 21px;
+        background: #fff;
+        border-radius: 45px;
+        transition: 0.3s; }
+      header .header__settings label[for='switchActiveExtension'] input:checked + label {
+        background: #4e2fe1; }
+      header .header__settings label[for='switchActiveExtension'] input:checked + label:after {
+        left: calc(100% - 2px);
+        transform: translateX(-100%); }
+      header .header__settings label[for='switchActiveExtension'] label:active:after {
+        width: 32px; }
 
 .icon-16px {
-    width: 16px;
-    margin-left: 10px;
-}
+  width: 16px;
+  margin-left: 10px; }
+
+#btn__addRules, .rule--delete {
+  display: flex;
+  align-items: center; }
 
 /* ------ Main ------ */
-
 main {
-    max-width: 1024px;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 30px;
-    margin-bottom: 80px;
-}
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+  margin-bottom: 80px; }
+  main > p {
+    text-align: center;
+    font-weight: 600;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 14px; }
 
-.border-green {
-    border: 3px solid green;
-}
-
-main .rule {
-    border: 1px solid #495057;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-main .rule + p {
-    display : none
-}
-
-main .rule .rule__actions {
-    float: right;
+.rule {
+  background-color: #fbfbfb;
+  border: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 14px #d9d9d9; }
+  .rule + p {
+    display: none; }
+  .rule .rule__actions {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-}
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 40px;
+    border-bottom: 1px solid #e9e9e9; }
+    .rule .rule__actions .rule__actions__settingsContainer {
+      display: flex;
+      justify-content: space-between; }
+  .rule .rule__content .rule__content__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px; }
+    .rule .rule__content .rule__content__item label {
+      font-weight: 600;
+      cursor: pointer; }
+    .rule .rule__content .rule__content__item input, .rule .rule__content .rule__content__item select {
+      padding: 0px 15px;
+      height: 30px; }
+    .rule .rule__content .rule__content__item input {
+      width: 280px; }
+    .rule .rule__content .rule__content__item select {
+      width: 200px; }
 
 main .rule .rule__content label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 15px 0;
-    clear: both;
-}
-
-main .rule .rule__content label input,
-main .rule .rule__content label select {
-    width: 80%;
-    height: 30px;
-    padding: 0px 15px;
-}
-
-main .rule .rule__actions .rule--delete {
-    margin-right: 20px;
-}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  clear: both; }
