@@ -1,0 +1,31 @@
+{
+    "name": "HTTP Request Override for Chrome",
+    "description": "Allows you to override a request or add one when page is loading",
+    "version": "1.0.0",
+    "author": "Thomas Guibert  ",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "cookies",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "notifications",
+        "storage",
+        "browsingData"
+    ],
+    "browser_action": {
+        "default_popup": "views/browseraction.html",
+        "default_icon": "assets/img/normal.png"
+    },
+    "background": {
+        "scripts": ["background/background.js"]
+    },
+    "content_scripts": [
+        {
+            "js": ["contentscript/contentscript.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "web_accessible_resources": ["assets/js/pagescript.js"]
+}

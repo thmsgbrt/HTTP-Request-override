@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTTP Request Override</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>HTTP Request Override</h1>
+            <label for="headerActivate">
+                Active : 
+                <input id="switchActiveExtension" type="checkbox">
+            </label>
+            <a href="#" class="btn" id="btn__addRules">Add Rule 
+                <img class="icon-16px" src="../assets/img/plus.svg" alt="Add rule">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <p>Click on AddRule to add a rule.</p>
+    </main>
+    
+    <script src="../services/store.js"></script>
+    <script src="../services/messenger.js"></script>
+    <script src="../services/createElement.js"></script>
+    <script src="../services/ruleRowCreator.js"></script>
+    <script src="../services/ui.js"></script>
+    <script src="../services/app.js"></script>
+    <script src="browseraction.js"></script>
+</body>
+</html>
